@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hoteles",
+  "info": {
+    "singularName": "hotel",
+    "pluralName": "hoteles",
+    "displayName": "hotel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "imagenes": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtititle": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    },
+    "url": {
+      "type": "uid"
+    },
+    "portada": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "face": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "biginteger"
+    },
+    "maps": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "text"
+    },
+    "video": {
+      "type": "string"
+    }
+  }
+}
