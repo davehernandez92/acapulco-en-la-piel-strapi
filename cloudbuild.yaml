@@ -1,0 +1,23 @@
+steps:
+  # Step 1: Set up Node.js environment
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build']
+
+  # Step 2: Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/acapulco-en-la-piel-strapi/strapi-backend'
+      - '.'
+
+  # Step 3: Push Docker image to Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'gcr.io/acapulco-en-la-piel-strapi/strapi-backend'
+
+images:
+  - 'gcr.io/acapulco-en-la-piel-strapi/strapi-backend'
